@@ -1,111 +1,794 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jerlev Fodboldgolf</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jerlev Fodboldgolf</title>
+  <meta name="description" content="Jerlev Fodboldgolf åbner 1. april 2026. Oplev en professionel fodboldgolfbane med 18 sjove huller i flotte omgivelser." />
+  <style>
+    :root {
+      --green-dark: #0f4f2a;
+      --green: #1d6b3a;
+      --green-soft: #2f8b4b;
+      --green-light: #eaf4e4;
+      --sand: #f6f2e7;
+      --card: rgba(255,255,255,0.88);
+      --text: #173120;
+      --muted: #5a6f61;
+      --white: #ffffff;
+      --shadow: 0 20px 50px rgba(14, 56, 29, 0.12);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 16px;
+      --max: 1180px;
+    }
 
-<style>
-body{
-margin:0;
-font-family:Arial, sans-serif;
-background:#f2fdf3;
-text-align:center;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-header{
-background:#1f7a3a;
-color:white;
-padding:40px 20px;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-h1{
-font-size:40px;
-margin:0;
-}
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(106, 180, 95, 0.18), transparent 28%),
+        radial-gradient(circle at top right, rgba(48, 114, 62, 0.12), transparent 30%),
+        linear-gradient(180deg, #faf8ef 0%, #f7f5ea 45%, #eef6ea 100%);
+      line-height: 1.6;
+    }
 
-.hero{
-padding:80px 20px;
-background:url("https://images.unsplash.com/photo-1521417531039-9f3f0e5c9d9f") center/cover;
-color:white;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-.hero h2{
-font-size:50px;
-}
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-.section{
-padding:60px 20px;
-}
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
 
-.boxes{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-}
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(248, 246, 237, 0.82);
+      border-bottom: 1px solid rgba(20, 80, 42, 0.08);
+    }
 
-.box{
-background:white;
-padding:30px;
-border-radius:15px;
-width:220px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 16px 0;
+    }
 
-footer{
-background:#145c2b;
-color:white;
-padding:30px;
-margin-top:40px;
-}
-</style>
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
 
+    .brand img {
+      width: 68px;
+      height: 68px;
+      object-fit: contain;
+      background: transparent;
+      border-radius: 16px;
+    }
+
+    .brand-text small {
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      font-size: 11px;
+      color: var(--green-soft);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 24px;
+      line-height: 1;
+      color: var(--green-dark);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav a {
+      font-weight: 700;
+      color: var(--green-dark);
+      opacity: 0.9;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: none;
+      border-radius: 999px;
+      padding: 15px 24px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--green-dark), var(--green-soft));
+      color: var(--white);
+      box-shadow: 0 16px 35px rgba(16, 79, 42, 0.24);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 22px 40px rgba(16, 79, 42, 0.28);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.85);
+      color: var(--green-dark);
+      border: 1px solid rgba(18, 79, 42, 0.12);
+    }
+
+    .hero {
+      padding: 54px 0 42px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.82);
+      border: 1px solid rgba(16, 79, 42, 0.08);
+      color: var(--green-dark);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      box-shadow: 0 10px 25px rgba(21, 67, 33, 0.08);
+    }
+
+    .hero h1 {
+      margin: 18px 0 0;
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 0.94;
+      letter-spacing: -0.04em;
+      color: var(--green-dark);
+    }
+
+    .hero h1 span {
+      display: block;
+      color: var(--green-soft);
+    }
+
+    .hero p {
+      margin: 24px 0 0;
+      max-width: 740px;
+      font-size: 20px;
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .hero-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 34px;
+      background: linear-gradient(160deg, rgba(13,73,37,0.98), rgba(44,124,57,0.92));
+      color: var(--white);
+      padding: 28px;
+      min-height: 100%;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card::before,
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(8px);
+      pointer-events: none;
+    }
+
+    .hero-card::before {
+      width: 220px;
+      height: 220px;
+      right: -60px;
+      top: -60px;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .hero-card::after {
+      width: 140px;
+      height: 140px;
+      left: -30px;
+      bottom: -30px;
+      background: rgba(194, 255, 173, 0.14);
+    }
+
+    .hero-card img {
+      width: 110px;
+      background: rgba(255,255,255,0.92);
+      padding: 10px;
+      border-radius: 22px;
+      box-shadow: 0 12px 26px rgba(0,0,0,0.12);
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-card h2 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.05;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-card p {
+      margin: 14px 0 24px;
+      color: rgba(255,255,255,0.85);
+      font-size: 17px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .info-box {
+      padding: 16px;
+      border-radius: var(--radius-md);
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(8px);
+    }
+
+    .info-box strong {
+      display: block;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 8px;
+    }
+
+    .info-box span {
+      font-size: 18px;
+      font-weight: 700;
+      display: block;
+    }
+
+    section {
+      padding: 36px 0;
+    }
+
+    .section-head {
+      max-width: 700px;
+      margin-bottom: 26px;
+    }
+
+    .section-head small {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--green-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .section-head h3 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1;
+      color: var(--green-dark);
+      letter-spacing: -0.03em;
+    }
+
+    .section-head p {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .cards-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius-xl);
+      padding: 26px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(16, 79, 42, 0.06);
+    }
+
+    .icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #dff1d6, #eff8ea);
+      color: var(--green-dark);
+      font-size: 28px;
+      margin-bottom: 14px;
+    }
+
+    .card h4 {
+      margin: 0 0 8px;
+      font-size: 24px;
+      color: var(--green-dark);
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .dark-band {
+      background: linear-gradient(180deg, #0d4022 0%, #0f4d28 100%);
+      color: white;
+      margin-top: 18px;
+    }
+
+    .dark-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .dark-band .section-head h3,
+    .dark-band .section-head p,
+    .dark-band .section-head small {
+      color: white;
+    }
+
+    .dark-band .section-head p {
+      opacity: 0.85;
+    }
+
+    .practical-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .practical-item {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-lg);
+      padding: 22px;
+    }
+
+    .practical-item h4 {
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+
+    .practical-item p {
+      margin: 0;
+      color: rgba(255,255,255,0.8);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 0.95fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .stat {
+      background: white;
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: 0 10px 22px rgba(13, 64, 34, 0.07);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 34px;
+      line-height: 1;
+      color: var(--green-soft);
+      margin-bottom: 8px;
+    }
+
+    .contact-panel {
+      background: linear-gradient(180deg, #14572d 0%, #0f4524 100%);
+      color: white;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 12px;
+      margin: 24px 0;
+    }
+
+    .contact-item {
+      padding: 16px 18px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.07);
+      font-weight: 700;
+    }
+
+    .form {
+      display: grid;
+      gap: 12px;
+    }
+
+    .form input,
+    .form textarea {
+      width: 100%;
+      border: none;
+      border-radius: 16px;
+      padding: 15px 16px;
+      font-size: 16px;
+      font-family: inherit;
+      color: #1d2f22;
+    }
+
+    .form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    footer {
+      padding: 22px 0 36px;
+    }
+
+    .footer-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 20px 24px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.88);
+      border: 1px solid rgba(16, 79, 42, 0.08);
+      box-shadow: 0 14px 30px rgba(14, 56, 29, 0.08);
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .footer-brand img {
+      width: 54px;
+      height: 54px;
+      object-fit: contain;
+      border-radius: 14px;
+    }
+
+    .footer-brand strong,
+    .footer-right strong {
+      display: block;
+      color: var(--green-dark);
+      margin-bottom: 4px;
+    }
+
+    .footer-brand span,
+    .footer-right span {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    @media (max-width: 1024px) {
+      .hero-grid,
+      .dark-grid,
+      .two-col,
+      .cards-4 {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cards-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 760px) {
+      .topbar-inner,
+      .footer-box,
+      .dark-grid,
+      .two-col,
+      .hero-grid,
+      .cards-4,
+      .practical-grid,
+      .stats,
+      .info-grid {
+        grid-template-columns: 1fr;
+        display: grid;
+      }
+
+      .topbar-inner {
+        display: grid;
+        justify-content: stretch;
+      }
+
+      .nav {
+        justify-content: flex-start;
+      }
+
+      .hero p,
+      .section-head p {
+        font-size: 17px;
+      }
+
+      .brand-text strong {
+        font-size: 20px;
+      }
+
+      .hero-card h2 {
+        font-size: 28px;
+      }
+
+      .footer-box {
+        align-items: flex-start;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <img src="/mnt/data/Skærmbillede 2026-03-24 kl. 16.30.05.png" alt="Jerlev Fodboldgolf logo" />
+        <div class="brand-text">
+          <small>Jerlev</small>
+          <strong>Fodboldgolf</strong>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#info">Info</a>
+        <a href="#oplevelser">Oplevelser</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="#kontakt" class="btn btn-primary">Book en dag</a>
+      </nav>
+    </div>
+  </header>
 
-<header>
-<h1>Jerlev Fodboldgolf</h1>
-<p>Danmarks sjoveste fodboldgolf bane</p>
-</header>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="badge">⚽ Åbner 1. april 2026</div>
+          <h1>En professionel <span>fodboldgolf-oplevelse</span> i Jerlev</h1>
+          <p>
+            Velkommen til Jerlev Fodboldgolf – et moderne og sjovt sted for familier,
+            venner, firmaer og grupper. Oplev 18 spændende huller, flotte omgivelser
+            og masser af gode minder fra morgen til aften.
+          </p>
+          <div class="hero-actions">
+            <a href="#info" class="btn btn-primary">Se information</a>
+            <a href="#kontakt" class="btn btn-secondary">Kontakt os</a>
+          </div>
+        </div>
 
-<div class="hero">
-<h2>18 Huller Fodboldgolf</h2>
-<p>Tag venner, familie eller kollegaer med til en sjov dag</p>
-</div>
+        <div class="hero-card">
+          <img src="/mnt/data/Skærmbillede 2026-03-24 kl. 16.30.05.png" alt="Jerlev Fodboldgolf logo" />
+          <h2>Jerlev Fodboldgolf</h2>
+          <p>
+            En stilren og aktiv destination med lange åbningstider, flot identitet og plads
+            til både afslappede besøg og større arrangementer.
+          </p>
 
-<div class="section">
-<h2>Information</h2>
+          <div class="info-grid">
+            <div class="info-box">
+              <strong>Åbner</strong>
+              <span>1. april 2026</span>
+            </div>
+            <div class="info-box">
+              <strong>Åbningstider</strong>
+              <span>08:00 – 22:00</span>
+            </div>
+            <div class="info-box">
+              <strong>Adresse</strong>
+              <span>Jerlevvej 24</span>
+            </div>
+            <div class="info-box">
+              <strong>Bane</strong>
+              <span>18 sjove huller</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="boxes">
+    <section id="oplevelser">
+      <div class="container">
+        <div class="section-head">
+          <small>Hvorfor vælge os</small>
+          <h3>Skabt til oplevelser, grin og konkurrence</h3>
+          <p>
+            Jerlev Fodboldgolf er lavet til gæster, der vil have en aktiv dag i flotte omgivelser
+            med plads til både hygge, konkurrence og fællesskab.
+          </p>
+        </div>
 
-<div class="box">
-<h3>📍 Lokation</h3>
-<p>Jerlev</p>
-</div>
+        <div class="cards-4">
+          <article class="card">
+            <div class="icon">🏆</div>
+            <h4>18 sjove huller</h4>
+            <p>En varieret bane med udfordringer, grin og konkurrencer for både børn og voksne.</p>
+          </article>
 
-<div class="box">
-<h3>⚽ 18 Huller</h3>
-<p>Sjov bane for alle</p>
-</div>
+          <article class="card">
+            <div class="icon">👨‍👩‍👧‍👦</div>
+            <h4>For hele familien</h4>
+            <p>Perfekt til venner, familier, firmaer, fødselsdage og hyggelige sommerdage i det fri.</p>
+          </article>
 
-<div class="box">
-<h3>👨‍👩‍👧‍👦 For alle</h3>
-<p>Familie, venner og firmaer</p>
-</div>
+          <article class="card">
+            <div class="icon">🌿</div>
+            <h4>Naturskøn oplevelse</h4>
+            <p>Nyd en aktiv dag i grønne omgivelser med masser af plads, frisk luft og gode oplevelser.</p>
+          </article>
 
-<div class="box">
-<h3>⏰ Åbningstid</h3>
-<p>10:00 - 20:00</p>
-</div>
+          <article class="card">
+            <div class="icon">🎉</div>
+            <h4>Perfekt til events</h4>
+            <p>Ideelt til polterabend, firmaudflugter, skolegrupper og andre arrangementer.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-</div>
-</div>
+    <section id="info" class="dark-band">
+      <div class="container dark-grid">
+        <div class="section-head">
+          <small>Praktisk info</small>
+          <h3>Planlæg jeres næste tur til banen</h3>
+          <p>
+            Med åbning fra kl. 08:00 til 22:00 er der god tid til både hygge og konkurrence.
+            Banan er perfekt til spontane besøg og planlagte arrangementer.
+          </p>
+        </div>
 
-<footer>
-<p>Kontakt: info@jerlevfodboldgolf.dk</p>
-</footer>
+        <div class="practical-grid">
+          <div class="practical-item">
+            <h4>Åbningsdato</h4>
+            <p>Vi slår dørene op den 1. april 2026.</p>
+          </div>
+          <div class="practical-item">
+            <h4>Åbent hver dag</h4>
+            <p>Fra kl. 08:00 til 22:00 i sæsonen.</p>
+          </div>
+          <div class="practical-item">
+            <h4>Adresse</h4>
+            <p>Jerlevvej 24 – nemt at finde og let at besøge.</p>
+          </div>
+          <div class="practical-item">
+            <h4>Grupper og events</h4>
+            <p>Perfekt til venner, familier, firmaer og selskaber.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section>
+      <div class="container two-col">
+        <article class="card">
+          <div class="section-head">
+            <small>Om banen</small>
+            <h3>Et sted folk har lyst til at komme tilbage til</h3>
+            <p>
+              Vores ambition er at skabe en bane, der både ser professionel ud og føles
+              imødekommende. Derfor kombinerer vi et stærkt visuelt udtryk med en afslappet
+              stemning og fokus på oplevelsen fra start til slut.
+            </p>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>18</strong>
+              <span>spændende huller</span>
+            </div>
+            <div class="stat">
+              <strong>08–22</strong>
+              <span>lange åbningstider</span>
+            </div>
+            <div class="stat">
+              <strong>2026</strong>
+              <span>sæsonstart</span>
+            </div>
+          </div>
+        </article>
+
+        <article id="kontakt" class="card contact-panel">
+          <div class="section-head">
+            <small>Kontakt</small>
+            <h3>Få besked om åbning og booking</h3>
+            <p>
+              Brug sektionen her som kontaktområde nu. Senere kan I skifte det ud med jeres
+              rigtige telefonnummer, e-mail og bookinglink.
+            </p>
+          </div>
+
+          <div class="contact-list">
+            <div class="contact-item">📞 Telefon: Indsæt nummer</div>
+            <div class="contact-item">✉️ E-mail: Indsæt e-mail</div>
+            <div class="contact-item">📍 Adresse: Jerlevvej 24</div>
+          </div>
+
+          <form class="form">
+            <input type="text" placeholder="Dit navn" />
+            <input type="email" placeholder="Din e-mail" />
+            <textarea placeholder="Skriv din besked her"></textarea>
+            <button type="button" class="btn btn-primary">Send forespørgsel</button>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-box">
+      <div class="footer-brand">
+        <img src="/mnt/data/Skærmbillede 2026-03-24 kl. 16.30.05.png" alt="Jerlev Fodboldgolf logo" />
+        <div>
+          <strong>Jerlev Fodboldgolf</strong>
+          <span>Åbner 1. april 2026 · Åbningstider 08:00 – 22:00</span>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <strong>Jerlevvej 24</strong>
+        <span>Professionel fodboldgolfbane i flotte omgivelser</span>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
