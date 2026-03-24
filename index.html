@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jerlev Fodboldgolf</title>
-  <meta name="description" content="Jerlev Fodboldgolf åbner 1. april 2026. Oplev en professionel fodboldgolfbane med 18 sjove huller i flotte omgivelser." />
+  <meta
+    name="description"
+    content="Jerlev Fodboldgolf åbner i 2027. Oplev 18 sjove huller, hyggelige omgivelser og gode oplevelser for familier, venner, firmaer og grupper."
+  />
   <style>
     :root {
       --green-dark: #0f4f2a;
@@ -12,7 +15,7 @@
       --green-soft: #2f8b4b;
       --green-light: #eaf4e4;
       --sand: #f6f2e7;
-      --card: rgba(255,255,255,0.88);
+      --card: rgba(255,255,255,0.9);
       --text: #173120;
       --muted: #5a6f61;
       --white: #ffffff;
@@ -62,7 +65,7 @@
       top: 0;
       z-index: 20;
       backdrop-filter: blur(14px);
-      background: rgba(248, 246, 237, 0.82);
+      background: rgba(248, 246, 237, 0.84);
       border-bottom: 1px solid rgba(20, 80, 42, 0.08);
     }
 
@@ -82,11 +85,13 @@
     }
 
     .brand img {
-      width: 68px;
-      height: 68px;
+      width: 72px;
+      height: 72px;
       object-fit: contain;
-      background: transparent;
-      border-radius: 16px;
+      background: rgba(255,255,255,0.9);
+      border-radius: 18px;
+      padding: 6px;
+      box-shadow: 0 10px 22px rgba(14, 56, 29, 0.08);
     }
 
     .brand-text small {
@@ -117,7 +122,7 @@
     .nav a {
       font-weight: 700;
       color: var(--green-dark);
-      opacity: 0.9;
+      opacity: 0.95;
     }
 
     .btn {
@@ -146,7 +151,7 @@
     }
 
     .btn-secondary {
-      background: rgba(255,255,255,0.85);
+      background: rgba(255,255,255,0.88);
       color: var(--green-dark);
       border: 1px solid rgba(18, 79, 42, 0.12);
     }
@@ -157,7 +162,7 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1.08fr 0.92fr;
       gap: 34px;
       align-items: center;
     }
@@ -166,7 +171,7 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: rgba(255,255,255,0.82);
+      background: rgba(255,255,255,0.86);
       border: 1px solid rgba(16, 79, 42, 0.08);
       color: var(--green-dark);
       padding: 10px 16px;
@@ -178,8 +183,8 @@
 
     .hero h1 {
       margin: 18px 0 0;
-      font-size: clamp(42px, 7vw, 76px);
-      line-height: 0.94;
+      font-size: clamp(40px, 7vw, 76px);
+      line-height: 0.95;
       letter-spacing: -0.04em;
       color: var(--green-dark);
     }
@@ -240,8 +245,8 @@
     }
 
     .hero-card img {
-      width: 110px;
-      background: rgba(255,255,255,0.92);
+      width: 120px;
+      background: rgba(255,255,255,0.94);
       padding: 10px;
       border-radius: 22px;
       box-shadow: 0 12px 26px rgba(0,0,0,0.12);
@@ -260,7 +265,7 @@
 
     .hero-card p {
       margin: 14px 0 24px;
-      color: rgba(255,255,255,0.85);
+      color: rgba(255,255,255,0.88);
       font-size: 17px;
       position: relative;
       z-index: 1;
@@ -302,7 +307,7 @@
     }
 
     .section-head {
-      max-width: 700px;
+      max-width: 760px;
       margin-bottom: 26px;
     }
 
@@ -389,7 +394,7 @@
     }
 
     .dark-band .section-head p {
-      opacity: 0.85;
+      opacity: 0.88;
     }
 
     .practical-grid {
@@ -412,7 +417,7 @@
 
     .practical-item p {
       margin: 0;
-      color: rgba(255,255,255,0.8);
+      color: rgba(255,255,255,0.82);
     }
 
     .two-col {
@@ -442,6 +447,52 @@
       line-height: 1;
       color: var(--green-soft);
       margin-bottom: 8px;
+    }
+
+    .drink-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    .drink-card {
+      background: rgba(255,255,255,0.95);
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(16, 79, 42, 0.06);
+      text-align: center;
+    }
+
+    .drink-card img {
+      width: 100%;
+      max-width: 170px;
+      height: 170px;
+      object-fit: contain;
+      margin: 0 auto 14px;
+    }
+
+    .drink-card h4 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      color: var(--green-dark);
+    }
+
+    .drink-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .price {
+      display: inline-block;
+      margin-top: 12px;
+      background: var(--green-light);
+      color: var(--green-dark);
+      font-weight: 800;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 15px;
     }
 
     .contact-panel {
@@ -495,7 +546,7 @@
       gap: 16px;
       padding: 20px 24px;
       border-radius: 22px;
-      background: rgba(255,255,255,0.88);
+      background: rgba(255,255,255,0.9);
       border: 1px solid rgba(16, 79, 42, 0.08);
       box-shadow: 0 14px 30px rgba(14, 56, 29, 0.08);
     }
@@ -507,10 +558,12 @@
     }
 
     .footer-brand img {
-      width: 54px;
-      height: 54px;
+      width: 56px;
+      height: 56px;
       object-fit: contain;
       border-radius: 14px;
+      background: rgba(255,255,255,0.95);
+      padding: 4px;
     }
 
     .footer-brand strong,
@@ -529,12 +582,15 @@
     @media (max-width: 1024px) {
       .hero-grid,
       .dark-grid,
-      .two-col,
-      .cards-4 {
-        grid-template-columns: 1fr 1fr;
+      .two-col {
+        grid-template-columns: 1fr;
       }
 
       .cards-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .drink-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
@@ -548,7 +604,8 @@
       .cards-4,
       .practical-grid,
       .stats,
-      .info-grid {
+      .info-grid,
+      .drink-grid {
         grid-template-columns: 1fr;
         display: grid;
       }
@@ -585,7 +642,7 @@
   <header class="topbar">
     <div class="container topbar-inner">
       <div class="brand">
-        <img src="logo.png" alt="Jerlev Fodboldgolf logo">
+        <img src="./logo.png" alt="Jerlev Fodboldgolf logo" />
         <div class="brand-text">
           <small>Jerlev</small>
           <strong>Fodboldgolf</strong>
@@ -594,6 +651,7 @@
       <nav class="nav">
         <a href="#info">Info</a>
         <a href="#oplevelser">Oplevelser</a>
+        <a href="#drikkevarer">Drikkevarer</a>
         <a href="#kontakt">Kontakt</a>
         <a href="#kontakt" class="btn btn-primary">Book en dag</a>
       </nav>
@@ -604,12 +662,12 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="badge">⚽ Åbner 1. april 2026</div>
-          <h1>En professionel <span>fodboldgolf-oplevelse</span> i Jerlev</h1>
+          <div class="badge">⚽ Åbner i 2027</div>
+          <h1>En hyggelig og sjov <span>oplevelse i Jerlev</span></h1>
           <p>
-            Velkommen til Jerlev Fodboldgolf – et moderne og sjovt sted for familier,
-            venner, firmaer og grupper. Oplev 18 spændende huller, flotte omgivelser
-            og masser af gode minder fra morgen til aften.
+            Velkommen til Jerlev Fodboldgolf – et flot og indbydende sted for familier,
+            venner, firmaer og grupper. Oplev 18 sjove huller, grønne omgivelser
+            og gode oplevelser for både små og store selskaber.
           </p>
           <div class="hero-actions">
             <a href="#info" class="btn btn-primary">Se information</a>
@@ -618,17 +676,17 @@
         </div>
 
         <div class="hero-card">
-          <img src="logo.png" alt="Jerlev Fodboldgolf logo" />
+          <img src="./logo.png" alt="Jerlev Fodboldgolf logo" />
           <h2>Jerlev Fodboldgolf</h2>
           <p>
-            En stilren og aktiv destination med lange åbningstider, flot identitet og plads
-            til både afslappede besøg og større arrangementer.
+            En moderne og indbydende destination med plads til både afslappede besøg,
+            sjove oplevelser og større arrangementer.
           </p>
 
           <div class="info-grid">
             <div class="info-box">
               <strong>Åbner</strong>
-              <span>1. april 2026</span>
+              <span>2027</span>
             </div>
             <div class="info-box">
               <strong>Åbningstider</strong>
@@ -651,7 +709,7 @@
       <div class="container">
         <div class="section-head">
           <small>Hvorfor vælge os</small>
-          <h3>Skabt til oplevelser, grin og konkurrence</h3>
+          <h3>Skabt til oplevelser, grin og gode dage</h3>
           <p>
             Jerlev Fodboldgolf er lavet til gæster, der vil have en aktiv dag i flotte omgivelser
             med plads til både hygge, konkurrence og fællesskab.
@@ -660,7 +718,7 @@
 
         <div class="cards-4">
           <article class="card">
-            <div class="icon">🏆</div>
+            <div class="icon">⚽</div>
             <h4>18 sjove huller</h4>
             <p>En varieret bane med udfordringer, grin og konkurrencer for både børn og voksne.</p>
           </article>
@@ -673,7 +731,7 @@
 
           <article class="card">
             <div class="icon">🌿</div>
-            <h4>Naturskøn oplevelse</h4>
+            <h4>Flotte omgivelser</h4>
             <p>Nyd en aktiv dag i grønne omgivelser med masser af plads, frisk luft og gode oplevelser.</p>
           </article>
 
@@ -690,17 +748,17 @@
       <div class="container dark-grid">
         <div class="section-head">
           <small>Praktisk info</small>
-          <h3>Planlæg jeres næste tur til banen</h3>
+          <h3>Planlæg jeres næste tur</h3>
           <p>
             Med åbning fra kl. 08:00 til 22:00 er der god tid til både hygge og konkurrence.
-            Banen er perfekt til spontane besøg og planlagte arrangementer.
+            Banen passer godt til spontane besøg og planlagte arrangementer.
           </p>
         </div>
 
         <div class="practical-grid">
           <div class="practical-item">
-            <h4>Åbningsdato</h4>
-            <p>Vi slår dørene op den 1. april 2026.</p>
+            <h4>Åbning</h4>
+            <p>Vi glæder os til at åbne i 2027.</p>
           </div>
           <div class="practical-item">
             <h4>Åbent hver dag</h4>
@@ -722,27 +780,31 @@
       <div class="container two-col">
         <article class="card">
           <div class="section-head">
-            <small>Om banen</small>
+            <small>Om stedet</small>
             <h3>Et sted folk har lyst til at komme tilbage til</h3>
             <p>
-              Vores ambition er at skabe en bane, der både ser professionel ud og føles
-              imødekommende. Derfor kombinerer vi et stærkt visuelt udtryk med en afslappet
-              stemning og fokus på oplevelsen fra start til slut.
+              Vores ambition er at skabe et sted, der både ser flot ud og føles imødekommende.
+              Derfor kombinerer vi et stærkt visuelt udtryk med en afslappet stemning og fokus
+              på gode oplevelser fra start til slut.
+            </p>
+            <p>
+              Hos os kan du også købe billige drikkevarer, så dagen bliver endnu bedre:
+              sodavand til 5 kr. stk. og Red Bull til 10 kr.
             </p>
           </div>
 
           <div class="stats">
             <div class="stat">
               <strong>18</strong>
-              <span>spændende huller</span>
+              <span>sjove huller</span>
             </div>
             <div class="stat">
               <strong>08–22</strong>
               <span>lange åbningstider</span>
             </div>
             <div class="stat">
-              <strong>2026</strong>
-              <span>sæsonstart</span>
+              <strong>2027</strong>
+              <span>åbning</span>
             </div>
           </div>
         </article>
@@ -771,21 +833,57 @@
         </article>
       </div>
     </section>
+
+    <section id="drikkevarer">
+      <div class="container">
+        <div class="section-head">
+          <small>Drikkevarer</small>
+          <h3>Kolde drikke til gode priser</h3>
+          <p>
+            Når du besøger Jerlev Fodboldgolf, kan du købe billige drikkevarer til turen rundt på banen.
+            Vi sælger sodavand til 5 kr. stk. og Red Bull til 10 kr.
+          </p>
+        </div>
+
+        <div class="drink-grid">
+          <article class="drink-card">
+            <img src="./redbull.png" alt="Red Bull" />
+            <h4>Red Bull</h4>
+            <p>Perfekt når du vil have lidt ekstra energi til dagen.</p>
+            <span class="price">10 kr. stk.</span>
+          </article>
+
+          <article class="drink-card">
+            <img src="./faxe-kondi.png" alt="Faxe Kondi" />
+            <h4>Faxe Kondi</h4>
+            <p>En klassisk favorit som passer perfekt til en aktiv dag.</p>
+            <span class="price">5 kr. stk.</span>
+          </article>
+
+          <article class="drink-card">
+            <img src="./cocacola.png" alt="Coca-Cola" />
+            <h4>Coca-Cola</h4>
+            <p>En kold sodavand som er nem at tage med under besøget.</p>
+            <span class="price">5 kr. stk.</span>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
     <div class="container footer-box">
       <div class="footer-brand">
-        <img src="logo.png" alt="Jerlev Fodboldgolf logo">
+        <img src="./logo.png" alt="Jerlev Fodboldgolf logo" />
         <div>
           <strong>Jerlev Fodboldgolf</strong>
-          <span>Åbner 1. april 2026 · Åbningstider 08:00 – 22:00</span>
+          <span>Åbner i 2027 · Åbningstider 08:00 – 22:00</span>
         </div>
       </div>
 
       <div class="footer-right">
         <strong>Jerlevvej 24</strong>
-        <span>Professionel fodboldgolfbane i flotte omgivelser</span>
+        <span>Hyggelig fodboldgolf i flotte omgivelser</span>
       </div>
     </div>
   </footer>
