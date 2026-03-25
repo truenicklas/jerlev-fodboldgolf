@@ -114,9 +114,14 @@
     .nav {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 18px;
       flex-wrap: wrap;
       justify-content: flex-end;
+    }
+
+    .nav a:not(.btn-book) {
+      font-size: 16px;
+      opacity: 0.9;
     }
 
     .nav a {
@@ -153,9 +158,20 @@
     }
 
     .btn-book {
-      padding: 16px 28px;
-      font-size: 17px;
-      border: 2px solid rgba(255,255,255,0.2);
+      padding: 16px 32px;
+      font-size: 18px;
+      font-weight: 800;
+      border: none;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #2f8b4b, #6ecf68);
+      color: #ffffff;
+      box-shadow: 0 10px 25px rgba(47,139,75,0.35);
+      letter-spacing: 0.03em;
+    }
+
+    .btn-book:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 16px 35px rgba(47,139,75,0.45);
     }
 
     .btn-secondary {
@@ -558,19 +574,7 @@
       margin-bottom: 14px;
     }
 
-    .check {
-      width: 22px;
-      height: 22px;
-      background: #76b255;
-      color: #fff;
-      border-radius: 4px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 15px;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
+    
 
     .find-way-grid {
       display: grid;
@@ -1030,22 +1034,22 @@
         <div class="pricing-grid">
           <article class="pricing-card">
             <div class="pricing-card-top">
-              <h4>Voksne</h4>
-              <p class="pricing-age">15 år +</p>
-              <div class="pricing-price">100,00 DKK</div>
+              <h4>Børn</h4>
+              <p class="pricing-age">0-5 år</p>
+              <div class="pricing-price">GRATIS</div>
             </div>
             <div class="pricing-card-bottom">
               <p class="pricing-subtitle">Dette er inkluderet:</p>
               <ul class="feature-list">
-                <li><span class="check">✓</span><span>Leje af Select-fodbold</span></li>
-                <li><span class="check">✓</span><span>Adgang til banen hele dagen</span></li>
-                <li><span class="check">✓</span><span>Scorekort og kuglepen</span></li>
+                <li><span>Leje af fodbold</span></li>
+                <li><span>Adgang til banen hele dagen</span></li>
+                <li><span>Scorekort og kuglepen</span></li>
               </ul>
               <p class="pricing-subtitle">Derudover kan du benytte:</p>
               <ul class="feature-list">
-                <li><span class="check">✓</span><span>Grill, kul og optændingsgrej</span></li>
-                <li><span class="check">✓</span><span>Trækvogne til medbragt proviant</span></li>
-                <li><span class="check">✓</span><span>Toilet</span></li>
+                <li><span>Grill, kul og optændingsgrej</span></li>
+                <li><span>Trækvogne til medbragt proviant</span></li>
+                <li><span>Toilet</span></li>
               </ul>
             </div>
           </article>
@@ -1059,41 +1063,40 @@
             <div class="pricing-card-bottom">
               <p class="pricing-subtitle">Dette er inkluderet:</p>
               <ul class="feature-list">
-                <li><span class="check">✓</span><span>Leje af Select-fodbold</span></li>
-                <li><span class="check">✓</span><span>Adgang til banen hele dagen</span></li>
-                <li><span class="check">✓</span><span>Scorekort og kuglepen</span></li>
+                <li><span>Leje af fodbold</span></li>
+                <li><span>Adgang til banen hele dagen</span></li>
+                <li><span>Scorekort og kuglepen</span></li>
               </ul>
               <p class="pricing-subtitle">Derudover kan du benytte:</p>
               <ul class="feature-list">
-                <li><span class="check">✓</span><span>Grill, kul og optændingsgrej</span></li>
-                <li><span class="check">✓</span><span>Trækvogne til medbragt proviant</span></li>
-                <li><span class="check">✓</span><span>Toilet</span></li>
+                <li><span>Grill, kul og optændingsgrej</span></li>
+                <li><span>Trækvogne til medbragt proviant</span></li>
+                <li><span>Toilet</span></li>
               </ul>
             </div>
           </article>
 
           <article class="pricing-card">
             <div class="pricing-card-top">
-              <h4>Børn</h4>
-              <p class="pricing-age">0-6 år</p>
-              <div class="pricing-price">GRATIS</div>
+              <h4>Voksne</h4>
+              <p class="pricing-age">15 år +</p>
+              <div class="pricing-price">100,00 DKK</div>
             </div>
             <div class="pricing-card-bottom">
               <p class="pricing-subtitle">Dette er inkluderet:</p>
               <ul class="feature-list">
-                <li><span class="check">✓</span><span>Leje af Select-fodbold</span></li>
-                <li><span class="check">✓</span><span>Adgang til banen hele dagen</span></li>
-                <li><span class="check">✓</span><span>Scorekort og kuglepen</span></li>
+                <li><span>Leje af fodbold</span></li>
+                <li><span>Adgang til banen hele dagen</span></li>
+                <li><span>Scorekort og kuglepen</span></li>
               </ul>
               <p class="pricing-subtitle">Derudover kan du benytte:</p>
               <ul class="feature-list">
-                <li><span class="check">✓</span><span>Grill, kul og optændingsgrej</span></li>
-                <li><span class="check">✓</span><span>Trækvogne til medbragt proviant</span></li>
-                <li><span class="check">✓</span><span>Toilet</span></li>
+                <li><span>Grill, kul og optændingsgrej</span></li>
+                <li><span>Trækvogne til medbragt proviant</span></li>
+                <li><span>Toilet</span></li>
               </ul>
             </div>
           </article>
-        </div>
       </div>
     </section>
 
@@ -1110,36 +1113,14 @@
           </div>
 
           <div class="find-way-points">
-            <div class="find-way-point">📍 Adresse: Jerlevvej 24 , 7100 Vejle</div>
-            <div class="find-way-point">🚗 Vi ligger 10 min fra Vejle</div>
-            <div class="find-way-point">🚗 Vi ligger 20 minutter fra Kolding</div>
-            <div class="find-way-point">🚗 Vi ligger 20 minutter fra Billund</div>
+            <div class="find-way-point">Adresse: Jerlevvej 24 , 7100 Vejle</div>
+            <div class="find-way-point">Vi ligger 10 min fra Vejle</div>
+            <div class="find-way-point">Vi ligger 20 minutter fra Kolding</div>
+            <div class="find-way-point">Vi ligger 20 minutter fra Billund</div>
           </div>
         </article>
 
-        <article class="find-way-card find-way-map">
-          <div class="map-badge">Let at finde</div>
-          <h4>Perfekt placering til en hyggelig dag</h4>
-          <p>
-            Uanset om I planlægger en spontan tur eller et større arrangement,
-            er det nemt at komme frem til banen.
-          </p>
-
-          <div class="route-boxes">
-            <div class="route-box">
-              <strong>Fra Vejle centrum</strong>
-              <span>10 min</span>
-            </div>
-            <div class="route-box">
-              <strong>Fra Kolding</strong>
-              <span>20 min</span>
-            </div>
-            <div class="route-box">
-              <strong>Fra Billund</strong>
-              <span>20 min</span>
-            </div>
-          </div>
-        </article>
+        
       </div>
     </section>
 
@@ -1186,10 +1167,10 @@
           </div>
 
           <div class="contact-list">
-            <div class="contact-item">📞 Telefon: Kontakt os via e-mail</div>
-            <div class="contact-item">✉️ E-mail: info@jerlevfodboldgolf.dk</div>
-            <div class="contact-item">📍 Adresse: Jerlevvej 24 , 7100 Vejle</div>
-            <div class="contact-item">🏢 CVR: 46178289</div>
+            <div class="contact-item">Telefon: 42 92 89 68</div>
+            <div class="contact-item">E-mail: info@jerlevfodboldgolf.dk</div>
+            <div class="contact-item">Adresse: Jerlevvej 24 , 7100 Vejle</div>
+            <div class="contact-item">CVR: 46178289</div>
           </div>
 
           <form
