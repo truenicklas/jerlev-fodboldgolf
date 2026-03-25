@@ -535,6 +535,12 @@
       resize: vertical;
     }
 
+    .form-note {
+      margin-top: 8px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.82);
+    }
+
     footer {
       padding: 22px 0 36px;
     }
@@ -789,7 +795,7 @@
             </p>
             <p>
               Hos os kan du også købe billige drikkevarer, så dagen bliver endnu bedre:
-              sodavand til 5 kr. stk. og Red Bull til 10 kr.
+              sodavand til 10 kr. stk. og Red Bull til 15 kr.
             </p>
           </div>
 
@@ -824,11 +830,12 @@
             <div class="contact-item">📍 Adresse: Jerlevvej 24</div>
           </div>
 
-          <form class="form">
-            <input type="text" placeholder="Dit navn" />
-            <input type="email" placeholder="Din e-mail" />
-            <textarea placeholder="Skriv din besked her"></textarea>
-            <button type="button" class="btn btn-primary">Send forespørgsel</button>
+          <form class="form" id="bookingForm">
+            <input type="text" id="name" placeholder="Dit navn" required />
+            <input type="email" id="email" placeholder="Din e-mail" required />
+            <textarea id="message" placeholder="Skriv din besked her" required></textarea>
+            <button type="submit" class="btn btn-primary">Send forespørgsel</button>
+            <div class="form-note">Når du trykker, åbner din mail med en færdig besked til os.</div>
           </form>
         </article>
       </div>
@@ -841,7 +848,7 @@
           <h3>Kolde drikke til gode priser</h3>
           <p>
             Når du besøger Jerlev Fodboldgolf, kan du købe billige drikkevarer til turen rundt på banen.
-            Vi sælger sodavand til 5 kr. stk. og Red Bull til 10 kr.
+            Vi sælger sodavand til 10 kr. stk. og Red Bull til 15 kr.
           </p>
         </div>
 
@@ -850,21 +857,42 @@
             <img src="./redbull.png" alt="Red Bull" />
             <h4>Red Bull</h4>
             <p>Perfekt når du vil have lidt ekstra energi til dagen.</p>
-            <span class="price">10 kr. stk.</span>
+            <span class="price">15 kr. stk.</span>
           </article>
 
           <article class="drink-card">
             <img src="./faxe-kondi.png" alt="Faxe Kondi" />
             <h4>Faxe Kondi</h4>
             <p>En klassisk favorit som passer perfekt til en aktiv dag.</p>
-            <span class="price">5 kr. stk.</span>
+            <span class="price">10 kr. stk.</span>
           </article>
 
           <article class="drink-card">
             <img src="./cocacola.png" alt="Coca-Cola" />
             <h4>Coca-Cola</h4>
             <p>En kold sodavand som er nem at tage med under besøget.</p>
-            <span class="price">5 kr. stk.</span>
+            <span class="price">10 kr. stk.</span>
+          </article>
+
+          <article class="drink-card">
+            <img src="./fanta-exotic.png" alt="Fanta Exotic" />
+            <h4>Fanta Exotic</h4>
+            <p>En frisk og frugtig sodavand til en varm dag på banen.</p>
+            <span class="price">10 kr. stk.</span>
+          </article>
+
+          <article class="drink-card">
+            <img src="./fanta.png" alt="Fanta" />
+            <h4>Fanta</h4>
+            <p>Den klassiske appelsinsodavand som mange elsker.</p>
+            <span class="price">10 kr. stk.</span>
+          </article>
+
+          <article class="drink-card">
+            <img src="./pepsi-max.png" alt="Pepsi Max" />
+            <h4>Pepsi Max</h4>
+            <p>Et godt valg hvis du vil have en sukkerfri sodavand.</p>
+            <span class="price">10 kr. stk.</span>
           </article>
         </div>
       </div>
@@ -887,5 +915,26 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    const bookingForm = document.getElementById("bookingForm");
+
+    bookingForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      const subject = encodeURIComponent("Bookingforespørgsel fra " + name);
+      const body = encodeURIComponent(
+        "Navn: " + name + "\n" +
+        "E-mail: " + email + "\n\n" +
+        "Besked:\n" + message
+      );
+
+      window.location.href = `mailto:info@jerlevfodboldgolf.dk?subject=${subject}&body=${body}`;
+    });
+  </script>
 </body>
 </html>
