@@ -830,12 +830,20 @@
             <div class="contact-item">📍 Adresse: Jerlevvej 24</div>
           </div>
 
-          <form class="form" id="bookingForm">
-            <input type="text" id="name" placeholder="Dit navn" required />
-            <input type="email" id="email" placeholder="Din e-mail" required />
-            <textarea id="message" placeholder="Skriv din besked her" required></textarea>
+          <form
+            class="form"
+            id="bookingForm"
+            action="https://formspree.io/f/xreoggzp"
+            method="POST"
+          >
+            <input type="text" id="name" name="name" placeholder="Dit navn" required />
+            <input type="email" id="email" name="email" placeholder="Din e-mail" required />
+            <input type="tel" id="phone" name="phone" placeholder="Dit telefonnummer" />
+            <input type="date" id="date" name="date" required />
+            <input type="number" id="persons" name="persons" placeholder="Antal personer" min="1" required />
+            <textarea id="message" name="message" placeholder="Skriv din besked her" required></textarea>
             <button type="submit" class="btn btn-primary">Send forespørgsel</button>
-            <div class="form-note">Når du trykker, åbner din mail med en færdig besked til os.</div>
+            <div class="form-note">Når du trykker, bliver din bookingforespørgsel sendt direkte til os.</div>
           </form>
         </article>
       </div>
@@ -915,26 +923,5 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    const bookingForm = document.getElementById("bookingForm");
-
-    bookingForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const message = document.getElementById("message").value.trim();
-
-      const subject = encodeURIComponent("Bookingforespørgsel fra " + name);
-      const body = encodeURIComponent(
-        "Navn: " + name + "\n" +
-        "E-mail: " + email + "\n\n" +
-        "Besked:\n" + message
-      );
-
-      window.location.href = `mailto:info@jerlevfodboldgolf.dk?subject=${subject}&body=${body}`;
-    });
-  </script>
 </body>
 </html>
