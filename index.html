@@ -67,9 +67,10 @@
       left: 0;
       right: 0;
       z-index: 20;
-      backdrop-filter: blur(14px);
-      background: rgba(248, 246, 237, 0.84);
+      backdrop-filter: blur(18px);
+      background: rgba(248, 246, 237, 0.9);
       border-bottom: 1px solid rgba(20, 80, 42, 0.08);
+      box-shadow: 0 8px 24px rgba(14, 56, 29, 0.06);
       transition: opacity 0.35s ease, transform 0.35s ease;
     }
 
@@ -168,30 +169,20 @@
     }
 
     .btn-book {
-      padding: 14px 26px;
+      padding: 16px 30px;
       font-size: 16px;
       font-weight: 800;
       border: none;
       border-radius: 999px;
-      background: linear-gradient(135deg, #2f8b4b, #7ee27a);
-      color: #ffffff;
-      box-shadow: 0 8px 18px rgba(47,139,75,0.35);
-      letter-spacing: 0.02em;
+      background: linear-gradient(135deg, #4cc85c, #7ee27a);
+      color: #1d4b27;
+      box-shadow: 0 10px 24px rgba(76, 200, 92, 0.35);
+      letter-spacing: 0.01em;
     }
 
     .btn-book:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 26px rgba(47,139,75,0.45);
-    }
-
-    .btn-book:hover {
-      transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 18px 40px rgba(47,139,75,0.6);
-    }
-
-    .btn-book:hover {
-      transform: translateY(-2px) scale(1.03);
-      box-shadow: 0 16px 35px rgba(47,139,75,0.45);
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 16px 34px rgba(76, 200, 92, 0.42);
     }
 
     .btn-secondary {
@@ -201,14 +192,14 @@
     }
 
     .hero {
-      padding: 54px 0 42px;
+      padding: 70px 0 56px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.08fr 0.92fr;
-      gap: 34px;
-      align-items: center;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 40px;
+      align-items: stretch;
     }
 
     .badge {
@@ -227,9 +218,9 @@
 
     .hero h1 {
       margin: 18px 0 0;
-      font-size: clamp(40px, 7vw, 76px);
-      line-height: 0.95;
-      letter-spacing: -0.04em;
+      font-size: clamp(46px, 7vw, 88px);
+      line-height: 0.9;
+      letter-spacing: -0.05em;
       color: var(--green-dark);
     }
 
@@ -239,9 +230,9 @@
     }
 
     .hero p {
-      margin: 24px 0 0;
-      max-width: 740px;
-      font-size: 20px;
+      margin: 26px 0 0;
+      max-width: 700px;
+      font-size: 21px;
       color: var(--muted);
     }
 
@@ -255,12 +246,12 @@
     .hero-card {
       position: relative;
       overflow: hidden;
-      border-radius: 34px;
-      background: linear-gradient(160deg, rgba(13,73,37,0.98), rgba(44,124,57,0.92));
+      border-radius: 36px;
+      background: linear-gradient(160deg, #0d4c28 0%, #1d6b3a 55%, #58b85d 100%);
       color: var(--white);
-      padding: 28px;
+      padding: 34px;
       min-height: 100%;
-      box-shadow: var(--shadow);
+      box-shadow: 0 24px 55px rgba(14, 56, 29, 0.2);
     }
 
     .hero-card::before,
@@ -301,16 +292,16 @@
 
     .hero-card h2 {
       margin: 0;
-      font-size: 34px;
-      line-height: 1.05;
+      font-size: 40px;
+      line-height: 1;
       position: relative;
       z-index: 1;
     }
 
     .hero-card p {
-      margin: 14px 0 24px;
-      color: rgba(255,255,255,0.88);
-      font-size: 17px;
+      margin: 16px 0 26px;
+      color: rgba(255,255,255,0.9);
+      font-size: 18px;
       position: relative;
       z-index: 1;
     }
@@ -595,8 +586,6 @@
       margin-bottom: 14px;
     }
 
-    
-
     .find-way-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -640,79 +629,6 @@
       border: 1px solid rgba(16, 79, 42, 0.07);
       font-weight: 700;
       color: var(--green-dark);
-    }
-
-    .find-way-map {
-      min-height: 100%;
-      background: linear-gradient(160deg, rgba(13,73,37,0.98), rgba(44,124,57,0.92));
-      color: white;
-      position: relative;
-      overflow: hidden;
-      grid-column: 1 / -1;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 28px;
-      padding: 34px 36px;
-    }
-
-    .find-way-map::before {
-      content: "";
-      position: absolute;
-      inset: auto -70px -70px auto;
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.08);
-    }
-
-    .find-way-map .map-badge {
-      display: inline-flex;
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.12);
-      font-weight: 700;
-      margin-bottom: 18px;
-    }
-
-    .find-way-map h4 {
-      font-size: 34px;
-      line-height: 1.05;
-      margin: 0 0 14px;
-    }
-
-    .find-way-map p {
-      color: rgba(255,255,255,0.86);
-      font-size: 17px;
-      margin: 0 0 24px;
-    }
-
-    .route-boxes {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      flex: 1;
-    }
-
-    .route-box {
-      background: rgba(255,255,255,0.11);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 18px;
-      padding: 16px 18px;
-    }
-
-    .route-box strong {
-      display: block;
-      font-size: 14px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.75);
-      margin-bottom: 6px;
-    }
-
-    .route-box span {
-      font-size: 21px;
-      font-weight: 700;
     }
 
     .drink-grid {
@@ -764,8 +680,9 @@
     .contact-panel {
       background: linear-gradient(180deg, #14572d 0%, #0f4524 100%);
       color: white;
-      padding: 28px 32px;
+      padding: 36px;
       max-height: fit-content;
+      border-radius: 30px;
     }
 
     .contact-panel .section-head p {
@@ -782,10 +699,23 @@
       color: #dff7d8;
     }
 
+    .contact-wide {
+      padding: 36px;
+      border-radius: 30px;
+    }
+
+    .contact-wide-top {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      align-items: start;
+      margin-bottom: 24px;
+    }
+
     .contact-list {
       display: grid;
       gap: 12px;
-      margin: 24px 0;
+      margin: 0;
     }
 
     .contact-item {
@@ -795,11 +725,22 @@
       border: 1px solid rgba(255,255,255,0.12);
       font-weight: 700;
       color: #ffffff;
+      font-size: 16px;
     }
 
     .form {
       display: grid;
       gap: 12px;
+    }
+
+    .form-wide {
+      gap: 16px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
     }
 
     .form input,
@@ -816,6 +757,14 @@
     .form textarea {
       min-height: 120px;
       resize: vertical;
+    }
+
+    .form-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
     }
 
     .form-note {
@@ -873,7 +822,8 @@
       .hero-grid,
       .dark-grid,
       .two-col,
-      .find-way-grid {
+      .find-way-grid,
+      .contact-wide-top {
         grid-template-columns: 1fr;
       }
 
@@ -899,7 +849,9 @@
       .info-grid,
       .drink-grid,
       .pricing-grid,
-      .find-way-grid {
+      .find-way-grid,
+      .form-row,
+      .contact-wide-top {
         grid-template-columns: 1fr;
         display: grid;
       }
@@ -922,9 +874,8 @@
         font-size: 20px;
       }
 
-      .hero-card h2,
-      .find-way-map h4 {
-        font-size: 28px;
+      .hero-card h2 {
+        font-size: 30px;
       }
 
       .footer-box {
@@ -935,13 +886,9 @@
         min-height: auto;
       }
 
-      .find-way-map {
-        display: block;
-      }
-
-      .route-boxes {
-        grid-template-columns: 1fr;
-        margin-top: 20px;
+      .form-actions {
+        align-items: flex-start;
+        flex-direction: column;
       }
     }
   </style>
@@ -960,7 +907,7 @@
         <a href="#info">Info</a>
         <a href="#priser">Priser</a>
         <a href="#kontakt">Kontakt</a>
-        <a href="#kontakt" class="btn btn-primary btn-book">BOOK EN DAG</a>
+        <a href="#kontakt" class="btn btn-book">BOOK EN DAG</a>
       </nav>
     </div>
   </header>
@@ -1073,7 +1020,7 @@
           </div>
           <div class="practical-item">
             <h4>Adresse</h4>
-            <p>Jerlevvej 24 , 7100 Vejle – nemt at finde og let at besøge.</p>
+            <p>Jerlevvej 24, 7100 Vejle – nemt at finde og let at besøge.</p>
           </div>
           <div class="practical-item">
             <h4>Grupper og events</h4>
@@ -1152,6 +1099,7 @@
               </ul>
             </div>
           </article>
+        </div>
       </div>
     </section>
 
@@ -1209,37 +1157,52 @@
     </section>
 
     <section>
-      <div class="container two-col">
-        <article id="kontakt" class="card contact-panel">
-          <div class="section-head">
-            <small>Kontakt</small>
-            <h3>Få besked om åbning og booking</h3>
-            <p>
-              Skriv til os, hvis du vil høre mere om åbning, grupper, events eller booking.
-            </p>
-          </div>
+      <div class="container">
+        <article id="kontakt" class="card contact-panel contact-wide">
+          <div class="contact-wide-top">
+            <div class="section-head">
+              <small>Kontakt</small>
+              <h3>Få besked om åbning og booking</h3>
+              <p>
+                Skriv til os, hvis du vil høre mere om åbning, grupper, events eller booking.
+              </p>
+            </div>
 
-          <div class="contact-list">
-            <div class="contact-item">Telefon: 42 92 89 68</div>
-            <div class="contact-item">E-mail: info@jerlevfodboldgolf.dk</div>
-            <div class="contact-item">Adresse: Jerlevvej 24 , 7100 Vejle</div>
-            <div class="contact-item">CVR: 46178289</div>
+            <div class="contact-list">
+              <div class="contact-item">Telefon: 42 92 89 68</div>
+              <div class="contact-item">E-mail: info@jerlevfodboldgolf.dk</div>
+              <div class="contact-item">Adresse: Jerlevvej 24, 7100 Vejle</div>
+              <div class="contact-item">CVR: 46178289</div>
+            </div>
           </div>
 
           <form
-            class="form"
+            class="form form-wide"
             id="bookingForm"
             action="https://formspree.io/f/xreoggzp"
             method="POST"
           >
-            <input type="text" id="name" name="name" placeholder="Dit navn" required />
-            <input type="email" id="email" name="email" placeholder="Din e-mail" required />
-            <input type="tel" id="phone" name="phone" placeholder="Dit telefonnummer" />
-            <input type="date" id="date" name="date" required />
-            <input type="number" id="persons" name="persons" placeholder="Antal personer" min="1" required />
+            <div class="form-row">
+              <input type="text" id="name" name="name" placeholder="Dit navn" required />
+              <input type="email" id="email" name="email" placeholder="Din e-mail" required />
+            </div>
+
+            <div class="form-row">
+              <input type="tel" id="phone" name="phone" placeholder="Dit telefonnummer" />
+              <input type="date" id="date" name="date" required />
+            </div>
+
+            <div class="form-row">
+              <input type="number" id="persons" name="persons" placeholder="Antal personer" min="1" required />
+              <input type="text" name="subject" placeholder="Emne / arrangement" />
+            </div>
+
             <textarea id="message" name="message" placeholder="Skriv din besked her" required></textarea>
-            <button type="submit" class="btn btn-primary">Send forespørgsel</button>
-            <div class="form-note">Når du trykker, bliver din bookingforespørgsel sendt direkte til os.</div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Send forespørgsel</button>
+              <div class="form-note">Når du trykker, bliver din bookingforespørgsel sendt direkte til os.</div>
+            </div>
           </form>
         </article>
       </div>
@@ -1314,11 +1277,12 @@
       </div>
 
       <div class="footer-right">
-        <strong>Jerlevvej 24 , 7100 Vejle</strong>
+        <strong>Jerlevvej 24, 7100 Vejle</strong>
         <span>Hyggelig fodboldgolf i flotte omgivelser</span>
       </div>
     </div>
   </footer>
+
   <script>
     const topbar = document.querySelector('.topbar');
     let lastScrollY = window.scrollY;
