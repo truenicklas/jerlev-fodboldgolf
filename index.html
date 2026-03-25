@@ -143,11 +143,19 @@
       background: linear-gradient(135deg, var(--green-dark), var(--green-soft));
       color: var(--white);
       box-shadow: 0 16px 35px rgba(16, 79, 42, 0.24);
+      font-weight: 800;
+      letter-spacing: 0.02em;
     }
 
     .btn-primary:hover {
       transform: translateY(-2px);
       box-shadow: 0 22px 40px rgba(16, 79, 42, 0.28);
+    }
+
+    .btn-book {
+      padding: 16px 28px;
+      font-size: 17px;
+      border: 2px solid rgba(255,255,255,0.2);
     }
 
     .btn-secondary {
@@ -710,6 +718,20 @@
       color: white;
     }
 
+    .contact-panel .section-head p {
+      color: rgba(255,255,255,0.96);
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .contact-panel .section-head h3 {
+      color: #ffffff;
+    }
+
+    .contact-panel .section-head small {
+      color: #dff7d8;
+    }
+
     .contact-list {
       display: grid;
       gap: 12px;
@@ -719,9 +741,10 @@
     .contact-item {
       padding: 16px 18px;
       border-radius: 16px;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.12);
       font-weight: 700;
+      color: #ffffff;
     }
 
     .form {
@@ -748,7 +771,8 @@
     .form-note {
       margin-top: 8px;
       font-size: 14px;
-      color: rgba(255,255,255,0.82);
+      color: rgba(255,255,255,0.95);
+      font-weight: 500;
     }
 
     footer {
@@ -774,8 +798,8 @@
     }
 
     .footer-brand img {
-      width: 56px;
-      height: 56px;
+      width: 88px;
+      height: 88px;
       object-fit: contain;
       border-radius: 14px;
       background: rgba(255,255,255,0.95);
@@ -875,12 +899,9 @@
       </div>
       <nav class="nav">
         <a href="#info">Info</a>
-        <a href="#oplevelser">Oplevelser</a>
         <a href="#priser">Priser</a>
-        <a href="#findvej">Find vej</a>
-        <a href="#drikkevarer">Drikkevarer</a>
         <a href="#kontakt">Kontakt</a>
-        <a href="#kontakt" class="btn btn-primary">Book en dag</a>
+        <a href="#kontakt" class="btn btn-primary btn-book">Book en dag</a>
       </nav>
     </div>
   </header>
@@ -1012,18 +1033,16 @@
               <h4>Voksne</h4>
               <p class="pricing-age">15 år +</p>
               <div class="pricing-price">100,00 DKK</div>
-              <a href="#kontakt" class="pricing-btn">LÆS MERE</a>
             </div>
             <div class="pricing-card-bottom">
-              <p class="pricing-subtitle">I prisen indgår:</p>
+              <p class="pricing-subtitle">Dette er inkluderet:</p>
               <ul class="feature-list">
                 <li><span class="check">✓</span><span>Leje af Select-fodbold</span></li>
                 <li><span class="check">✓</span><span>Adgang til banen hele dagen</span></li>
                 <li><span class="check">✓</span><span>Scorekort og kuglepen</span></li>
               </ul>
-              <p class="pricing-subtitle">Du har mulighed for at benytte:</p>
+              <p class="pricing-subtitle">Derudover kan du benytte:</p>
               <ul class="feature-list">
-                <li><span class="check">✓</span><span>Grillhytte med borde og bænke</span></li>
                 <li><span class="check">✓</span><span>Grill, kul og optændingsgrej</span></li>
                 <li><span class="check">✓</span><span>Trækvogne til medbragt proviant</span></li>
                 <li><span class="check">✓</span><span>Toilet</span></li>
@@ -1034,20 +1053,18 @@
           <article class="pricing-card">
             <div class="pricing-card-top">
               <h4>Børn</h4>
-              <p class="pricing-age">7-14 år</p>
+              <p class="pricing-age">6-13 år</p>
               <div class="pricing-price">50,00 DKK</div>
-              <a href="#kontakt" class="pricing-btn">LÆS MERE</a>
             </div>
             <div class="pricing-card-bottom">
-              <p class="pricing-subtitle">I prisen indgår:</p>
+              <p class="pricing-subtitle">Dette er inkluderet:</p>
               <ul class="feature-list">
                 <li><span class="check">✓</span><span>Leje af Select-fodbold</span></li>
                 <li><span class="check">✓</span><span>Adgang til banen hele dagen</span></li>
                 <li><span class="check">✓</span><span>Scorekort og kuglepen</span></li>
               </ul>
-              <p class="pricing-subtitle">Du har mulighed for at benytte:</p>
+              <p class="pricing-subtitle">Derudover kan du benytte:</p>
               <ul class="feature-list">
-                <li><span class="check">✓</span><span>Grillhytte med borde og bænke</span></li>
                 <li><span class="check">✓</span><span>Grill, kul og optændingsgrej</span></li>
                 <li><span class="check">✓</span><span>Trækvogne til medbragt proviant</span></li>
                 <li><span class="check">✓</span><span>Toilet</span></li>
@@ -1060,18 +1077,16 @@
               <h4>Børn</h4>
               <p class="pricing-age">0-6 år</p>
               <div class="pricing-price">GRATIS</div>
-              <a href="#kontakt" class="pricing-btn">LÆS MERE</a>
             </div>
             <div class="pricing-card-bottom">
-              <p class="pricing-subtitle">I prisen indgår:</p>
+              <p class="pricing-subtitle">Dette er inkluderet:</p>
               <ul class="feature-list">
                 <li><span class="check">✓</span><span>Leje af Select-fodbold</span></li>
                 <li><span class="check">✓</span><span>Adgang til banen hele dagen</span></li>
                 <li><span class="check">✓</span><span>Scorekort og kuglepen</span></li>
               </ul>
-              <p class="pricing-subtitle">Du har mulighed for at benytte:</p>
+              <p class="pricing-subtitle">Derudover kan du benytte:</p>
               <ul class="feature-list">
-                <li><span class="check">✓</span><span>Grillhytte med borde og bænke</span></li>
                 <li><span class="check">✓</span><span>Grill, kul og optændingsgrej</span></li>
                 <li><span class="check">✓</span><span>Trækvogne til medbragt proviant</span></li>
                 <li><span class="check">✓</span><span>Toilet</span></li>
@@ -1096,7 +1111,7 @@
 
           <div class="find-way-points">
             <div class="find-way-point">📍 Adresse: Jerlevvej 24 , 7100 Vejle</div>
-            <div class="find-way-point">🚗 Vi ligger 10 min fra Vejle centrum</div>
+            <div class="find-way-point">🚗 Vi ligger 10 min fra Vejle</div>
             <div class="find-way-point">🚗 Vi ligger 20 minutter fra Kolding</div>
             <div class="find-way-point">🚗 Vi ligger 20 minutter fra Billund</div>
           </div>
