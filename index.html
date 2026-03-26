@@ -456,13 +456,6 @@
       color: rgba(255,255,255,0.82);
     }
 
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      align-items: start;
-    }
-
     .stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -539,23 +532,6 @@
       font-weight: 700;
       color: #6cab4f;
       margin-bottom: 46px;
-    }
-
-    .pricing-btn {
-      display: inline-block;
-      background: #76b255;
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: 700;
-      padding: 15px 34px;
-      border-radius: 999px;
-      transition: 0.2s ease;
-    }
-
-    .pricing-btn:hover {
-      background: #649b47;
-      transform: translateY(-1px);
     }
 
     .pricing-card-bottom {
@@ -699,23 +675,10 @@
       color: #dff7d8;
     }
 
-    .contact-wide {
-      padding: 36px;
-      border-radius: 30px;
-    }
-
-    .contact-wide-top {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 28px;
-      align-items: start;
-      margin-bottom: 24px;
-    }
-
     .contact-list {
       display: grid;
       gap: 12px;
-      margin: 0;
+      margin: 0 0 24px;
     }
 
     .contact-item {
@@ -821,9 +784,7 @@
     @media (max-width: 1024px) {
       .hero-grid,
       .dark-grid,
-      .two-col,
-      .find-way-grid,
-      .contact-wide-top {
+      .find-way-grid {
         grid-template-columns: 1fr;
       }
 
@@ -841,7 +802,6 @@
       .topbar-inner,
       .footer-box,
       .dark-grid,
-      .two-col,
       .hero-grid,
       .cards-4,
       .practical-grid,
@@ -850,8 +810,7 @@
       .drink-grid,
       .pricing-grid,
       .find-way-grid,
-      .form-row,
-      .contact-wide-top {
+      .form-row {
         grid-template-columns: 1fr;
         display: grid;
       }
@@ -1123,43 +1082,8 @@
           </div>
         </article>
 
-        <article class="card equal-card">
-          <div class="section-head">
-            <small>Om stedet</small>
-            <h3>Et sted folk har lyst til at komme tilbage til</h3>
-            <p>
-              Vores ambition er at skabe et sted, der både ser flot ud og føles imødekommende.
-              Derfor kombinerer vi et stærkt visuelt udtryk med en afslappet stemning og fokus
-              på gode oplevelser fra start til slut.
-            </p>
-            <p>
-              Hos os kan du også købe billige drikkevarer, så dagen bliver endnu bedre:
-              sodavand til 10 kr. stk. og Red Bull til 15 kr.
-            </p>
-          </div>
-
-          <div class="stats">
-            <div class="stat">
-              <strong>18</strong>
-              <span>sjove huller</span>
-            </div>
-            <div class="stat">
-              <strong>08–22</strong>
-              <span>lange åbningstider</span>
-            </div>
-            <div class="stat">
-              <strong>2027</strong>
-              <span>åbning</span>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <article id="kontakt" class="card contact-panel contact-wide">
-          <div class="contact-wide-top">
+        <article id="kontakt" class="card contact-panel equal-card">
+          <div>
             <div class="section-head">
               <small>Kontakt</small>
               <h3>Få besked om åbning og booking</h3>
@@ -1169,8 +1093,8 @@
             </div>
 
             <div class="contact-list">
-              <div class="contact-item">Telefon: 42 92 89 68</div>
               <div class="contact-item">E-mail: info@jerlevfodboldgolf.dk</div>
+              <div class="contact-item">Telefon: 42 92 89 68</div>
               <div class="contact-item">Adresse: Jerlevvej 24, 7100 Vejle</div>
               <div class="contact-item">CVR: 46178289</div>
             </div>
