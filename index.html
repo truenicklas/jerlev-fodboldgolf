@@ -208,20 +208,6 @@
       align-items: stretch;
     }
 
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(255,255,255,0.86);
-      border: 1px solid rgba(16, 79, 42, 0.08);
-      color: var(--green-dark);
-      padding: 10px 16px;
-      border-radius: 999px;
-      font-size: 14px;
-      font-weight: 700;
-      box-shadow: 0 10px 25px rgba(21, 67, 33, 0.08);
-    }
-
     .hero h1 {
       margin: 18px 0 0;
       font-size: clamp(46px, 7vw, 88px);
@@ -395,12 +381,7 @@
       width: 58px;
       height: 58px;
       border-radius: 18px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
       background: linear-gradient(135deg, #dff1d6, #eff8ea);
-      color: var(--green-dark);
-      font-size: 28px;
       margin-bottom: 14px;
     }
 
@@ -468,7 +449,7 @@
 
     .pricing-title {
       text-align: center;
-      color: #6cab4f;
+      color: var(--green-dark);
       font-size: clamp(34px, 4vw, 52px);
       font-weight: 700;
       margin-bottom: 36px;
@@ -485,7 +466,7 @@
     .pricing-card {
       overflow: hidden;
       border-radius: 28px;
-      background: #d6e3d0;
+      background: #f3f7f1;
       display: flex;
       flex-direction: column;
       box-shadow: var(--shadow);
@@ -496,10 +477,11 @@
       padding: 56px 32px 42px;
       text-align: center;
       min-height: 315px;
+      background: linear-gradient(135deg, #e4f2e1, #d2e8cc);
     }
 
     .pricing-card h4 {
-      color: #6cab4f;
+      color: var(--green-dark);
       font-size: 38px;
       font-weight: 700;
       margin: 0 0 22px;
@@ -514,7 +496,7 @@
     .pricing-price {
       font-size: 38px;
       font-weight: 700;
-      color: #6cab4f;
+      color: var(--green-dark);
       margin-bottom: 46px;
     }
 
@@ -525,7 +507,7 @@
     }
 
     .pricing-subtitle {
-      color: #6cab4f;
+      color: var(--green-dark);
       font-size: 18px;
       margin-bottom: 24px;
       font-weight: 700;
@@ -874,7 +856,6 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="badge">⚽ Velkommen til Jerlev Fodboldgolf</div>
           <h1>En hyggelig og sjov <span>oplevelse i Jerlev</span></h1>
           <p>
             Velkommen til Jerlev Fodboldgolf – et flot og indbydende sted for familier,
@@ -901,8 +882,8 @@
               <span>Jerlevvej 24</span>
             </div>
             <div class="info-box">
-              <strong>Åbningstider</strong>
-              <span>08:00 – 22:00</span>
+              <strong>Åbning</strong>
+              <span>Vi åbner i 2027</span>
             </div>
             <div class="info-box">
               <strong>Vejle</strong>
@@ -930,25 +911,25 @@
 
         <div class="cards-4">
           <article class="card">
-            <div class="icon">⚽</div>
+            <div class="icon"></div>
             <h4>18 sjove huller</h4>
             <p>En varieret bane med udfordringer, grin og konkurrencer for både børn og voksne.</p>
           </article>
 
           <article class="card">
-            <div class="icon">👨‍👩‍👧‍👦</div>
+            <div class="icon"></div>
             <h4>For hele familien</h4>
             <p>Perfekt til venner, familier, firmaer, fødselsdage og hyggelige sommerdage i det fri.</p>
           </article>
 
           <article class="card">
-            <div class="icon">🌿</div>
+            <div class="icon"></div>
             <h4>Flotte omgivelser</h4>
             <p>Nyd en aktiv dag i grønne omgivelser med masser af plads, frisk luft og gode oplevelser.</p>
           </article>
 
           <article class="card">
-            <div class="icon">🎉</div>
+            <div class="icon"></div>
             <h4>Perfekt til events</h4>
             <p>Ideelt til firmaudflugter, skolegrupper, polterabend og andre arrangementer.</p>
           </article>
@@ -962,22 +943,22 @@
           <small>Praktisk info</small>
           <h3>Planlæg jeres næste tur</h3>
           <p>
-            Med åbning fra kl. 08:00 til 22:00 er der god tid til både hygge og konkurrence.
-            Banen passer godt til spontane besøg og planlagte arrangementer.
+            Jerlev Fodboldgolf er et godt valg til både spontane besøg og planlagte arrangementer.
           </p>
         </div>
 
         <div class="practical-grid">
           <div class="practical-item">
             <h4>Åbning</h4>
+            <p>Vi åbner i 2027</p>
           </div>
           <div class="practical-item">
             <h4>Åbent hver dag</h4>
-            <p>Fra kl. 08:00 til 22:00 i sæsonen.</p>
+            <p>Der kommer mere information tættere på åbning.</p>
           </div>
           <div class="practical-item">
             <h4>Adresse</h4>
-            <p>Jerlevvej 24, 7100 Vejle – nemt at finde og let at besøge.</p>
+            <p>Jerlevvej 24, 7100 Vejle</p>
           </div>
           <div class="practical-item">
             <h4>Grupper og events</h4>
@@ -1016,7 +997,7 @@
           <article class="pricing-card">
             <div class="pricing-card-top">
               <h4>Børn</h4>
-              <p class="pricing-age">6-13 år</p>
+              <p class="pricing-age">6-14 år</p>
               <div class="pricing-price">50,00 DKK</div>
             </div>
             <div class="pricing-card-bottom">
@@ -1206,7 +1187,7 @@
         <img src="./logo.png" alt="Jerlev Fodboldgolf logo" />
         <div>
           <strong>Jerlev Fodboldgolf</strong>
-          <span>Åbningstider 08:00 – 22:00 · CVR 46178289</span>
+          <span>Vi åbner i 2027 · CVR 46178289</span>
         </div>
       </div>
 
@@ -1218,18 +1199,13 @@
 
   <script>
     const topbar = document.querySelector('.topbar');
-    let lastScrollY = window.scrollY;
 
     window.addEventListener('scroll', () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > 120 && currentScrollY > lastScrollY) {
-        topbar.classList.add('is-hidden');
-      } else {
+      if (window.scrollY <= 10) {
         topbar.classList.remove('is-hidden');
+      } else {
+        topbar.classList.add('is-hidden');
       }
-
-      lastScrollY = currentScrollY;
     });
   </script>
 </body>
